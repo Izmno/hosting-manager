@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Hosting Service Dashboard</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <!-- Link to CSS will go here -->
+</head>
+<body class="container">
+    <header>
+        <div class="top-bar">
+            <div class="logo">Hosting Manager</div>
+            <button class="sidebar-toggle">☰</button> <!-- Add this button -->
+            <div class="login-logout">Login / Logout</div>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul class="nav-list">
+            <li><a href="/">Dashboard</a></li>
+            <li><a href="/account">Account Settings</a></li>
+            <li><a href="/websites">My Websites</a></li>
+            <li><a href="/support">Support</a></li>
+        </ul>
+    </aside>
+
+    <main class="content">
+        {{ block "content" . }}
+        {{ end }}
+    </main>
+</body>
+</html>

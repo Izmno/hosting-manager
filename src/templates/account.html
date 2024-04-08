@@ -1,0 +1,19 @@
+{{ template "_base.html" . }}
+
+{{ define "content" }}
+<section id="account-settings">
+    <h2>Account Settings</h2>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="user@example.com">
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" value="+1234567890">
+        
+        <label for="vat">VAT Number:</label>
+        <input type="text" id="vat" name="vat" value="VAT123456">
+        
+        <button type="submit">Update Settings</button>
+    </form>
+</section>
+{{ end }}

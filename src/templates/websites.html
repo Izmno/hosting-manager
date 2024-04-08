@@ -1,0 +1,16 @@
+{{ template "_base.html" . }}
+
+{{ define "content" }}
+<section id="my-websites">
+    <h2>My Websites</h2>
+    <ul class="websites-list">
+        {{ range .websites }}
+        <li>
+            <div class="website-name">{{ .Name }}</div>
+            <div class="website-status">Status: {{ .Status }}</div>
+            <div class="website-actions"><button>Edit</button> <button>Delete</button></div>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}   
