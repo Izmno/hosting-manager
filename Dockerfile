@@ -14,4 +14,7 @@ WORKDIR /app
 COPY --from=build /app/app .
 COPY --from=build /app/public/ public/
 
+RUN mkdir -p /app/src/templates
+COPY --from=build /app/src/templates/ /app/src/templates/
+
 CMD ["./app"]
